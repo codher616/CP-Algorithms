@@ -1,0 +1,129 @@
+DISTINCT VALUES IN AN ARRAY
+    Create a set
+    Insert every element in the set
+    The answer is the size of the set
+
+___________________________________________________________________________________
+
+DISTRIBUTE N NUMBERS AMONG M NUMBERS SO THAT THEY ARE EQUAL OR LESS
+    For each person do a lower_bound for his h
+    If it is h, then that is the answer
+    If not, it is the previous or none
+
+___________________________________________________________________________________
+
+MAXIMUM AT ANY TIME GIVEN THE START AND THE BEGINNING
+    Create a vector of pairs for any time and if it is arrival or leaving
+    Have a variable with the maximum at any time
+
+___________________________________________________________________________________
+
+MAXIMUM EVENTS YOU CAN GO GIVEN THE START AND ENDING OF EACH
+    Sort the events by the ending time
+    Hava a variable of the current ending time
+    For every event, check if you can see it and update the current ending time
+
+___________________________________________________________________________________
+
+SUM OF TWO VALUES
+    Use two pointers
+
+___________________________________________________________________________________
+
+MAXIMUM SUBARRAY SUM OF ANY SIZE
+    Have a variable with the maximum subarray sum
+    For every value, check if the value is greater than the variable plus the value
+    Update the variable
+
+___________________________________________________________________________________
+
+MAXIMUM SUBARRAY SUM OF SIZE BETWEEN A AND B
+	Sliding window
+	Have a multiset with the prefix sums of the numbers between the window
+	The answer is the max of the current prefix sum minus the begining of the multiset
+
+___________________________________________________________________________________
+
+MINIMUM OF MAKING ALL ELEMENTS EQUAL
+    Get the median of the sorted array
+    Calculate the cost
+
+___________________________________________________________________________________
+
+MINIMUM SUM IMPOSSIBLE TO CREATE
+    Have a variable with the maximum sum
+    For every value, if it is not equal to the variable plus one, the variable is the answer
+
+___________________________________________________________________________________
+
+MINIMUM ROUNDS TO COLLECT ALL NUMBERS IN INCREASING ORDER
+    Have a vector to store the position of every element
+    For every element, sum one if it's position is less that the previous element
+
+___________________________________________________________________________________
+
+LONGEST CONTIGUOUS SUBSEQUENCE IN WHICH EVERY ELEMENT IS UNIQUE
+    Store a variable with the position of the last element repeated
+    For every element, check if the last time it appeared is greater than j
+    The answer is the maximum i - j + 1
+    Update the map with the last time the element
+
+___________________________________________________________________________________
+
+MINIMUM NUMBER OF TOWERS IN WHICH EVERY ELEMENT IS GREATER THAN THE ABOVE ONE
+	Create a set with the top of every tower
+	Upper bound every new value
+
+___________________________________________________________________________________
+
+TASKS AND DEADLINES
+	Sort the tasks by their deadlines in increasing order
+	Have a variable with the current time
+
+___________________________________________________________________________________
+
+NEAREST SMALLER VALUE
+	Create a stack with the minimum values in the left
+	For every element look for the first element that is smaller
+	If the stack is empty, there is no smaller value
+
+___________________________________________________________________________________
+
+NUMBER OF SUBARRAYS HAVING SUM X
+	Have a map with the number of sums equal to prefix - x
+	For every element, add it to prefix and sum the answers
+
+___________________________________________________________________________________
+	 
+NUMBER OF SUBARRAYS WITH AT MOST K DISTINCT VALUES
+	Have a sliding window
+	Have a map with the number of times a value appears in the sliding window
+	Have a variable with the number of different values in the sliding window
+	While tha varable is less than k, keep adding
+	When it is not less, sum r-l to the answer, substract one to the variable and map[l]
+
+___________________________________________________________________________________
+
+ARRAY DIVISIONS SUCH THAT THE SUM OF THE GREATEST DIVISION IS MINIMUM
+	Binary search the answer
+
+___________________________________________________________________________________
+
+MEDIAN FOR EVERY SUBARRAY
+	Have two sets, one for the greatest and other with the smallest
+	The median is the biggest of the smallest
+	Create a function to insert and erase elements
+	If one of the sets is greater than k/2 of K/2+1 change the sets
+___________________________________________________________________________________
+
+MINIMUM COST OF MAKING ALL ELEMENTS EQUAL FOR EVERY SUBARRAY OF LENGTH K
+	Have two sets, one for the greatest and other with the smallest
+	The median is the biggest of the smallest
+	Create a function to insert and erase elements
+	If one of the sets is greater than k/2 of K/2+1 change the sets
+	Have the total sum of each set
+	The answer is the first sum - second sum (plus the median if the mid is odd)
+
+___________________________________________________________________________________
+
+
